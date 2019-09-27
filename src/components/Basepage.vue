@@ -113,21 +113,81 @@ export default {
     dialog: false,
     drawer: null,
     items: [
-      { icon: "contacts", text: "门诊挂号", id: "out_reg" },
-      { icon: "history", text: "划价收款", id: "out_cash" },
-      { icon: "content_copy", text: "交班结算", id: "out_chk" },
-      { icon: "keyboard", text: "发票号管理", id: "out_receipt" },
+      { 
+        icon: "contacts", 
+        text: "物资基础数据", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "科室管理", id: "detail1" },
+          { text: "人员管理", id: "detail2" },
+          { text: "期间划分调整", id: "detail3" },
+          { text: "物资生产商管理", id: "detail4" },
+          { text: "物资供应商管理", id: "detail5" },
+          { text: "物资入出分类", id: "detail6" },
+          { text: "物资目录管理", id: "detail7" },
+          { text: "物资定额管理", id: "detail8" }
+        ]
+      },
+      { icon: "history", 
+        text: "物资库房管理", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "外购入库", id: "d1" },
+          { text: "其他入库", id: "d2" },
+          { text: "物资移库", id: "d3" },
+          { text: "物资领用", id: "d4" },
+          { text: "其他出库", id: "d5" },
+          { text: "物资盘存", id: "d6" },
+          { text: "物资申购", id: "d7" },
+          { text: "物资计划", id: "d8" },
+          { text: "物资更换", id: "d9" }
+        ]
+      },
+      { icon: "content_copy", 
+        text: "在用物资管理", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "物资报废", id: "e1" },
+          { text: "物资发放", id: "e2" },
+          { text: "物资权属变更", id: "e3" }  
+        ] 
+      },
+      { icon: "keyboard", 
+        text: "查询与统计",
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "库存查询", id: "f1" },
+          { text: "明细帐", id: "f2" },
+          { text: "总帐", id: "f3" },
+          { text: "入出汇总表", id: "f4" },
+          { text: "分科汇总表", id: "f5" },
+          { text: "分类统计表", id: "f6" },
+          { text: "消耗汇总表", id: "f7" },
+          { text: "超储短缺分析", id: "f8" },
+          { text: "效期报警分析", id: "f9" },
+          { text: "滞用报警分析", id: "f10" },
+          { text: "一次性卫生用品发放表", id: "f11" },
+          { text: "明细表", id: "f12" },
+          { text: "调拨汇总表", id: "f13" },
+          { text: "外购汇总表", id: "f14" },
+          { text: "科室领用汇总表", id: "f15" },
+          { text: "用途分类汇总表", id: "f16" },
+          { text: "科室物资查询", id: "f17" }
+        ] 
+       },
       {
         icon: "keyboard_arrow_up",
         "icon-alt": "keyboard_arrow_down",
-        text: "查询与统计",
-        model: true,
+        text: "供应室查询与统计",
+        model: false,
         children: [
-          { text: "挂号明细", id: "detail_reg" },
-          { text: "收款明细", id: "detail_cash" },
-          { text: "交班明细", id: "detail_chk" },
-          { text: "退号退款明细", id: "detail_undo" },
-          { text: "操作日志", id: "detail_op" }
+          { text: "供应室物资明细帐", id: "detail_reg" },
+          { text: "供应室物资总帐", id: "detail_cash" },
+          { text: "供应室工作量报表", id: "detail_chk" }
         ]
       },
       {
@@ -136,9 +196,8 @@ export default {
         text: "管理与维护",
         model: false,
         children: [
-          { text: "收费词典查询", id: "mg_dict" },
-          { text: "数据分析", id: "mg_analyse" },
-          { text: "发票管理", id: "mg_invoice" }
+          { text: "物资参数设置", id: "mg_dict" },
+          { text: "物资月结管理", id: "mg_analyse" }
         ]
       },
       { icon: "help", text: "退出登录", id: "logout" }
