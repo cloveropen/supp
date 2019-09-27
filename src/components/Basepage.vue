@@ -196,8 +196,8 @@ export default {
         text: "管理与维护",
         model: false,
         children: [
-          { text: "物资参数设置", id: "mg_dict" },
-          { text: "物资月结管理", id: "mg_analyse" }
+          { text: "物资参数设置", id: "mg_dict",icon: "content_copy" },
+          { text: "物资月结管理", id: "mg_analyse", icon: "history"}
         ]
       },
       { icon: "help", text: "退出登录", id: "logout" }
